@@ -1,0 +1,26 @@
+{
+  "name": "s",
+  "version": "1.0.0",
+  "description": "Link to Heroku:",
+  "main": "server/index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rytr0/SE2Lab_Exam_2016_12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rytr0/SE2Lab_Exam_2016_12/issues"
+  },
+  "homepage": "https://github.com/rytr0/SE2Lab_Exam_2016_12#readme"
+}
