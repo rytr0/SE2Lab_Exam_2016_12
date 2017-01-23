@@ -3,15 +3,60 @@ info:
   title: Students WS
   description: A web services for the management of students
   version: "1.0.0"
-host: myserver.it
-schemes:
-  - https
+host: localhost:5000
 basePath: /
 produces:
-  - application/json
+  - text/html
 consumes:
   - application/json
 paths:
+
+  /addStudent:
+    post:
+      summary: delete a student
+      description: it returns the name of a student, given his/her ID or SSN
+      parameters:
+        - name: ID
+          in: formData
+          description: SSN of the student
+          required: true
+          type: string
+        - name: SSN
+          in: formData
+          description: ID of the student
+          required: true
+          type: string
+        - name: name
+          in: formData
+          description: SSN of the student
+          required: true
+          type: string
+        - name: address
+          in: formData
+          description: Address of the student
+          required: true
+          type: string
+        - name: mark
+          in: formData
+          description: Mark of the student
+          required: true
+          type: string          
+      responses:
+        200:
+          description: name of the student
+          schema: 
+            properties:
+              StudentName:
+                type: string
+        406:
+          description: input non accetabile
+          schema: 
+            properties:
+              error:
+                type: integer
+        400:
+          description: inserimento fallito
+            
   /showList:
     get:
       summary: show list of students
@@ -90,6 +135,8 @@ paths:
             type: array
             items:
               $ref: "#/definitions/student"
+              
+
           
 definitions:
   student:
@@ -106,4 +153,3 @@ definitions:
       address:
         type: string
         description: address of the student
-

@@ -132,7 +132,32 @@ var insertStudent = function insertStudent(student)
 	else
 		return false;
 }
-
+var searchByMark = function searchByMark(mark)
+{
+    var marklist=[];
+    for(i=0; i < studentList.length; i++)
+        {
+        if(mark[0]=='<')
+            {
+                if(studentList[i].mark<mark[1])
+                    {
+                        marklist.push(studentList[i]);
+                    }
+            
+            }
+        else
+            {
+               
+                if(studentList[i].mark>mark[1])
+                    {
+                        marklist.push(studentList[i]);
+                    }
+            
+            
+                }
+            }
+    return marklist ;
+}
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
 
 
@@ -142,5 +167,6 @@ exports.searchStudentID = searchStudentID;
 exports.searchStudentSSN = searchStudentSSN; 
 exports.deleteStudentID = deleteStudentID; 
 exports.deleteStudentSSN = deleteStudentSSN; 
-exports.insertStudent = insertStudent;  
+exports.insertStudent = insertStudent; 
+exports.searchByMark = searchByMark;  
 exports.getList = getList; 
