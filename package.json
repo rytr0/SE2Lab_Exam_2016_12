@@ -2,7 +2,7 @@
   "name": "s",
   "version": "1.0.0",
   "description": "Link to Heroku:",
-  "main": "server/index.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
